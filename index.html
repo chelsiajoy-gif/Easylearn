@@ -43,7 +43,7 @@
 <footer class="footer"><span>EasyLearn · CAPM Playground</span><a href="#top">Back to the top ↑</a></footer>
 </main>
 <script>
-const ids={rf:document.getElementById('rf'),market:document.getElementById('market'),beta:document.getElementById('beta')};const rideSvg=document.querySelector('.ride-card svg'),rideTrack=document.getElementById('ride-track'),rideCart=document.getElementById('ride-cart');let cartPosition=.625;
+const ids={rf:document.getElementById('rf'),market:document.getElementById('market'),beta:document.getElementById('beta')};const rideSvg=document.querySelector('.ride-card svg'),rideTrack=document.getElementById('ride-track'),rideCart=document.getElementById('ride-cart');let cartPosition=.625;let ridePlaying=false,rideFrame=0,lastRideFrame=0;const ridePlay=document.getElementById("ride-play"),rideRestart=document.getElementById("ride-restart"),rideStatus=document.getElementById("ride-status");
 const format=(n,d=1)=>Number(n).toFixed(d);
 function update(){
   const rf=Number(ids.rf.value),market=Number(ids.market.value),beta=Number(ids.beta.value),premium=market-rf,result=rf+beta*premium;
